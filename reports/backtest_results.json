@@ -1,0 +1,2880 @@
+{
+  "final_config": {
+    "playbook": "continuation",
+    "base_tf_sec": 60,
+    "regime_tf_sec": 60,
+    "adx_period": 14,
+    "adx_max": 30.0,
+    "hurst_window": 100,
+    "hurst_max": 0.5,
+    "regime_mode": "either",
+    "bb_period": 20,
+    "bb_k": 2.0,
+    "bbw_lookback": 100,
+    "bbw_max_pctile": 0.8,
+    "rsi_period": 2,
+    "rsi_low": 5.0,
+    "rsi_high": 95.0,
+    "vwap_window": 30,
+    "entry_z": 2.0,
+    "use_absorption": false,
+    "absorb_rel_volume": 1.0,
+    "absorb_wick_frac": 0.2,
+    "sr_lookback": 20,
+    "session_warmup_bars": 0,
+    "max_bar_atr": 0.0,
+    "entry_offset_atr": 0.0,
+    "entry_style": "marketable",
+    "entry_ttl_bars": 2,
+    "target": "nearest",
+    "ema_period": 20,
+    "target_frac": 0.15,
+    "dynamic_target": true,
+    "stop_z": 3.5,
+    "stop_atr_mult": 1.5,
+    "atr_period": 14,
+    "max_hold_bars": 10,
+    "cont_target_atr": 0.75,
+    "cont_stop_atr": 2.5,
+    "cont_max_hold_bars": 5,
+    "cont_min_di_gap": 40.0,
+    "cont_max_wick": 0.4,
+    "max_rel_volume": 1.5,
+    "max_atr_bps": 0.0,
+    "risk_per_trade": 0.004,
+    "kelly_fraction": 0.25,
+    "kelly_min_trades": 40,
+    "kelly_lookback": 150,
+    "risk_floor": 0.001,
+    "risk_cap": 0.01,
+    "max_notional_frac": 0.25,
+    "max_open_positions": 4,
+    "max_same_side": 0,
+    "session_flatten_bars": 3,
+    "max_daily_loss": 0.02,
+    "allow_short": true
+  },
+  "walk_forward": {
+    "oos": {
+      "trades": 12341,
+      "win_rate": 0.8966858439348513,
+      "win_rate_ci_low": 0.8911917331012581,
+      "win_rate_ci_high": 0.9019330648710383,
+      "avg_win": 47.9998888487264,
+      "avg_loss": -96.14793571607781,
+      "payoff_ratio": 0.49922953094353206,
+      "profit_factor": 4.33292077601657,
+      "expectancy": 33.10737800518653,
+      "expectancy_bps": 13.328002542179682,
+      "expectancy_r": 0.2561843566284758,
+      "t_stat": 77.6827588112988,
+      "net_pnl": 408578.151962007,
+      "total_return": 4.0857815196200695,
+      "fees": 0.0,
+      "worst_trade": -402.3216400000008,
+      "worst_trade_r": -1.095732098765428,
+      "best_trade": 203.35999999999567,
+      "largest_loss_vs_avg_win": 8.381720242476682,
+      "longest_losing_streak": 7,
+      "avg_bars_held": 1.3848958755368284,
+      "long_share": 0.5585446884369176,
+      "exits": {
+        "session_end": {
+          "trades": 45,
+          "win_rate": 0.5111111111111111,
+          "pnl": -303.5899999999417
+        },
+        "stop": {
+          "trades": 713,
+          "win_rate": 0.0,
+          "pnl": -90703.18803799973
+        },
+        "target": {
+          "trades": 10805,
+          "win_rate": 1.0,
+          "pnl": 524140.7200000059
+        },
+        "time": {
+          "trades": 778,
+          "win_rate": 0.3059125964010283,
+          "pnl": -24555.78999999924
+        }
+      },
+      "max_drawdown": 0.004655477989008228,
+      "days": 95,
+      "trades_per_day": 129.90526315789472,
+      "sharpe": 26.32088211376784,
+      "worst_day": 0.0030574759565609178,
+      "profitable_days": 1.0
+    },
+    "efficiency": 0.8695736058922773,
+    "rank_correlation": 0.35746378468532686,
+    "probability_of_overfit": 0.47368421052631576,
+    "trials_hurdle": 3.377508689746394,
+    "folds": [
+      {
+        "fold": 1,
+        "playbook": "continuation",
+        "is": {
+          "trades": 2017,
+          "win_rate": 0.917203767972236,
+          "win_rate_ci_low": 0.9043693998285035,
+          "win_rate_ci_high": 0.9284519355992708,
+          "avg_win": 52.05972972973029,
+          "avg_loss": -81.08864090419087,
+          "payoff_ratio": 0.6420101403751572,
+          "profit_factor": 7.112088381401442,
+          "expectancy": 41.03554634060544,
+          "expectancy_bps": 16.506854842048728,
+          "expectancy_r": 0.23865569131665698,
+          "t_stat": 45.83441818699662,
+          "net_pnl": 82768.69696900118,
+          "total_return": 0.8276869696900118,
+          "fees": 0.0,
+          "worst_trade": -329.99999999999534,
+          "worst_trade_r": -1.0434919354838563,
+          "best_trade": 123.0400000000001,
+          "largest_loss_vs_avg_win": 6.338872708583018,
+          "longest_losing_streak": 5,
+          "avg_bars_held": 1.2359940505701537,
+          "long_share": 0.5855230540406544,
+          "exits": {
+            "session_end": {
+              "trades": 8,
+              "win_rate": 0.375,
+              "pnl": -48.57999999998876
+            },
+            "stop": {
+              "trades": 33,
+              "win_rate": 0.0,
+              "pnl": -5984.653030999982
+            },
+            "target": {
+              "trades": 1800,
+              "win_rate": 1.0,
+              "pnl": 94998.76000000103
+            },
+            "time": {
+              "trades": 176,
+              "win_rate": 0.26704545454545453,
+              "pnl": -6196.829999999866
+            }
+          }
+        },
+        "oos": {
+          "trades": 422,
+          "win_rate": 0.9028436018957346,
+          "win_rate_ci_low": 0.8708454212505633,
+          "win_rate_ci_high": 0.9275735213797481,
+          "avg_win": 52.28963254593189,
+          "avg_loss": -92.06481285365808,
+          "payoff_ratio": 0.5679654465713089,
+          "profit_factor": 5.277922808382163,
+          "expectancy": 38.26467458056888,
+          "expectancy_bps": 15.443259078130831,
+          "expectancy_r": 0.22677918898921967,
+          "t_stat": 19.240585739100865,
+          "net_pnl": 16147.692673000067,
+          "total_return": 0.16147692673000066,
+          "fees": 0.0,
+          "worst_trade": -376.3171869999979,
+          "worst_trade_r": -1.0301550847457654,
+          "best_trade": 123.74999999999537,
+          "largest_loss_vs_avg_win": 7.196783925942413,
+          "longest_losing_streak": 2,
+          "avg_bars_held": 1.3933649289099526,
+          "long_share": 0.466824644549763,
+          "exits": {
+            "session_end": {
+              "trades": 1,
+              "win_rate": 1.0,
+              "pnl": 5.360000000002742
+            },
+            "stop": {
+              "trades": 6,
+              "win_rate": 0.0,
+              "pnl": -1161.4573269999873
+            },
+            "target": {
+              "trades": 367,
+              "win_rate": 1.0,
+              "pnl": 19600.910000000044
+            },
+            "time": {
+              "trades": 48,
+              "win_rate": 0.2708333333333333,
+              "pnl": -2297.119999999991
+            }
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1959,
+          "win_rate": 0.9167942827973455,
+          "win_rate_ci_low": 0.9037326218914377,
+          "win_rate_ci_high": 0.9282244754107594,
+          "avg_win": 51.1987360801787,
+          "avg_loss": -85.10299474846549,
+          "payoff_ratio": 0.6016091000264344,
+          "profit_factor": 6.628772660413964,
+          "expectancy": 39.8576528106182,
+          "expectancy_bps": 16.055587934517302,
+          "expectancy_r": 0.23789974175509632,
+          "t_stat": 44.96997319391269,
+          "net_pnl": 78081.14185600105,
+          "total_return": 0.7808114185600105,
+          "fees": 0.0,
+          "worst_trade": -376.3171869999979,
+          "worst_trade_r": -1.0434919354838563,
+          "best_trade": 123.74999999999537,
+          "largest_loss_vs_avg_win": 7.350126503331534,
+          "longest_losing_streak": 5,
+          "avg_bars_held": 1.2353241449719246,
+          "long_share": 0.5788667687595712,
+          "exits": {
+            "session_end": {
+              "trades": 8,
+              "win_rate": 0.5,
+              "pnl": -27.069999999982343
+            },
+            "stop": {
+              "trades": 30,
+              "win_rate": 0.0,
+              "pnl": -5498.27814399997
+            },
+            "target": {
+              "trades": 1749,
+              "win_rate": 1.0,
+              "pnl": 90762.27000000089
+            },
+            "time": {
+              "trades": 172,
+              "win_rate": 0.25,
+              "pnl": -7155.7799999998715
+            }
+          }
+        },
+        "oos": {
+          "trades": 534,
+          "win_rate": 0.8857677902621723,
+          "win_rate_ci_low": 0.8559882260242193,
+          "win_rate_ci_high": 0.9100365664053736,
+          "avg_win": 51.12541226215675,
+          "avg_loss": -79.70985209836005,
+          "payoff_ratio": 0.6413938919252945,
+          "profit_factor": 4.973431325912529,
+          "expectancy": 36.179810902622066,
+          "expectancy_bps": 14.629789658509605,
+          "expectancy_r": 0.21607497993335045,
+          "t_stat": 19.37434838460061,
+          "net_pnl": 19320.019022000182,
+          "total_return": 0.19320019022000182,
+          "fees": 0.0,
+          "worst_trade": -324.5715059999984,
+          "worst_trade_r": -1.0352515624999938,
+          "best_trade": 122.88000000000102,
+          "largest_loss_vs_avg_win": 6.348535721055645,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.3689138576779025,
+          "long_share": 0.5636704119850188,
+          "exits": {
+            "session_end": {
+              "trades": 2,
+              "win_rate": 1.0,
+              "pnl": 26.64000000000442
+            },
+            "stop": {
+              "trades": 6,
+              "win_rate": 0.0,
+              "pnl": -1150.6209779999972
+            },
+            "target": {
+              "trades": 460,
+              "win_rate": 1.0,
+              "pnl": 23988.87000000014
+            },
+            "time": {
+              "trades": 66,
+              "win_rate": 0.16666666666666666,
+              "pnl": -3544.86999999997
+            }
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1938,
+          "win_rate": 0.9060887512899897,
+          "win_rate_ci_low": 0.8922859448043313,
+          "win_rate_ci_high": 0.9182848041177228,
+          "avg_win": 51.10936218678852,
+          "avg_loss": -82.49068989010924,
+          "payoff_ratio": 0.6195773396352285,
+          "profit_factor": 5.977900046150887,
+          "expectancy": 38.56281446852464,
+          "expectancy_bps": 15.549007570822468,
+          "expectancy_r": 0.2310640378946641,
+          "t_stat": 42.16679470217307,
+          "net_pnl": 74734.73444000076,
+          "total_return": 0.7473473444000076,
+          "fees": 0.0,
+          "worst_trade": -376.3171869999979,
+          "worst_trade_r": -1.0411127659574468,
+          "best_trade": 123.74999999999537,
+          "largest_loss_vs_avg_win": 7.362979518794968,
+          "longest_losing_streak": 5,
+          "avg_bars_held": 1.2708978328173375,
+          "long_share": 0.5779153766769866,
+          "exits": {
+            "session_end": {
+              "trades": 7,
+              "win_rate": 0.7142857142857143,
+              "pnl": 51.52000000001368
+            },
+            "stop": {
+              "trades": 28,
+              "win_rate": 0.0,
+              "pnl": -5285.105559999974
+            },
+            "target": {
+              "trades": 1712,
+              "win_rate": 1.0,
+              "pnl": 88852.62000000062
+            },
+            "time": {
+              "trades": 191,
+              "win_rate": 0.20418848167539266,
+              "pnl": -8884.299999999894
+            }
+          }
+        },
+        "oos": {
+          "trades": 378,
+          "win_rate": 0.8968253968253969,
+          "win_rate_ci_low": 0.8620620735234265,
+          "win_rate_ci_high": 0.9236040246701701,
+          "avg_win": 55.28386430678533,
+          "avg_loss": -81.24488607692196,
+          "payoff_ratio": 0.6804596199992581,
+          "profit_factor": 5.914764389224321,
+          "expectancy": 41.197564664021876,
+          "expectancy_bps": 16.55904212471324,
+          "expectancy_r": 0.2246642088665518,
+          "t_stat": 17.883469113160814,
+          "net_pnl": 15572.67944300027,
+          "total_return": 0.1557267944300027,
+          "fees": 0.0,
+          "worst_trade": -231.17423000000167,
+          "worst_trade_r": -1.0243963636363664,
+          "best_trade": 117.80000000000086,
+          "largest_loss_vs_avg_win": 4.181585945532904,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.3862433862433863,
+          "long_share": 0.47883597883597884,
+          "exits": {
+            "session_end": {
+              "trades": 2,
+              "win_rate": 1.0,
+              "pnl": 29.610000000004334
+            },
+            "stop": {
+              "trades": 5,
+              "win_rate": 0.0,
+              "pnl": -938.2505570000008
+            },
+            "target": {
+              "trades": 328,
+              "win_rate": 1.0,
+              "pnl": 18370.270000000222
+            },
+            "time": {
+              "trades": 43,
+              "win_rate": 0.20930232558139536,
+              "pnl": -1888.949999999954
+            }
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "playbook": "continuation",
+        "is": {
+          "trades": 4426,
+          "win_rate": 0.9017171260732038,
+          "win_rate_ci_low": 0.8925951359129702,
+          "win_rate_ci_high": 0.9101423705477574,
+          "avg_win": 51.65435229265887,
+          "avg_loss": -122.85276046206846,
+          "payoff_ratio": 0.42045740037406376,
+          "profit_factor": 3.8575758273399736,
+          "expectancy": 34.503291730456795,
+          "expectancy_bps": 13.884992835210877,
+          "expectancy_r": 0.25619390800375547,
+          "t_stat": 44.191875215210416,
+          "net_pnl": 152711.56919900177,
+          "total_return": 1.5271156919900177,
+          "fees": 0.0,
+          "worst_trade": -245.86227199999593,
+          "worst_trade_r": -1.0839091954022715,
+          "best_trade": 99.6800000000004,
+          "largest_loss_vs_avg_win": 4.759759073291835,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.675101671938545,
+          "long_share": 0.5747853592408495,
+          "exits": {
+            "session_end": {
+              "trades": 22,
+              "win_rate": 0.6363636363636364,
+              "pnl": 19.730000000036256
+            },
+            "stop": {
+              "trades": 328,
+              "win_rate": 0.0,
+              "pnl": -47274.00080099986
+            },
+            "target": {
+              "trades": 3951,
+              "win_rate": 1.0,
+              "pnl": 205270.21000000153
+            },
+            "time": {
+              "trades": 124,
+              "win_rate": 0.20967741935483872,
+              "pnl": -5119.1199999999235
+            },
+            "trend_over": {
+              "trades": 1,
+              "win_rate": 0.0,
+              "pnl": -185.24999999999892
+            }
+          }
+        },
+        "oos": {
+          "trades": 1162,
+          "win_rate": 0.8924268502581756,
+          "win_rate_ci_low": 0.8733009610021908,
+          "win_rate_ci_high": 0.908966544291839,
+          "avg_win": 52.341677917069326,
+          "avg_loss": -122.27244900799933,
+          "payoff_ratio": 0.42807417649453494,
+          "profit_factor": 3.551303368198662,
+          "expectancy": 33.55788629432098,
+          "expectancy_bps": 13.5020298260531,
+          "expectancy_r": 0.24548829157977328,
+          "t_stat": 21.002409134635197,
+          "net_pnl": 38994.26387400098,
+          "total_return": 0.3899426387400098,
+          "fees": 0.0,
+          "worst_trade": -237.3503939999997,
+          "worst_trade_r": -1.0666473684210516,
+          "best_trade": 93.47000000000185,
+          "largest_loss_vs_avg_win": 4.534634796692227,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.7581755593803787,
+          "long_share": 0.5731497418244407,
+          "exits": {
+            "session_end": {
+              "trades": 5,
+              "win_rate": 0.2,
+              "pnl": -158.6999999999939
+            },
+            "stop": {
+              "trades": 88,
+              "win_rate": 0.0,
+              "pnl": -12591.856125999944
+            },
+            "target": {
+              "trades": 1030,
+              "win_rate": 1.0,
+              "pnl": 54127.13000000089
+            },
+            "time": {
+              "trades": 39,
+              "win_rate": 0.15384615384615385,
+              "pnl": -2382.3099999999727
+            }
+          }
+        }
+      },
+      {
+        "fold": 5,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1399,
+          "win_rate": 0.902072909220872,
+          "win_rate_ci_low": 0.8853795798334639,
+          "win_rate_ci_high": 0.9165641321294545,
+          "avg_win": 68.9867274167992,
+          "avg_loss": -82.3208219999994,
+          "payoff_ratio": 0.838022820238599,
+          "profit_factor": 7.719597074022714,
+          "expectancy": 54.16961928949298,
+          "expectancy_bps": 21.784366858755302,
+          "expectancy_r": 0.38689607153258093,
+          "t_stat": 42.99827241504673,
+          "net_pnl": 75783.29738600068,
+          "total_return": 0.7578329738600067,
+          "fees": 0.0,
+          "worst_trade": -298.19999999999516,
+          "worst_trade_r": -1.0466390243902688,
+          "best_trade": 194.8800000000045,
+          "largest_loss_vs_avg_win": 4.322570604028673,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.7591136526090065,
+          "long_share": 0.5453895639742673,
+          "exits": {
+            "session_end": {
+              "trades": 6,
+              "win_rate": 1.0,
+              "pnl": 142.14000000001545
+            },
+            "stop": {
+              "trades": 36,
+              "win_rate": 0.0,
+              "pnl": -5413.472613999977
+            },
+            "target": {
+              "trades": 1179,
+              "win_rate": 1.0,
+              "pnl": 84166.99000000054
+            },
+            "time": {
+              "trades": 178,
+              "win_rate": 0.43258426966292135,
+              "pnl": -3112.359999999904
+            }
+          }
+        },
+        "oos": {
+          "trades": 376,
+          "win_rate": 0.9095744680851063,
+          "win_rate_ci_low": 0.8762946043835161,
+          "win_rate_ci_high": 0.93456971379543,
+          "avg_win": 63.95549707602427,
+          "avg_loss": -77.18130217646981,
+          "payoff_ratio": 0.828639777673022,
+          "profit_factor": 8.335141293063925,
+          "expectancy": 51.193126930851925,
+          "expectancy_bps": 20.553165408685132,
+          "expectancy_r": 0.3925064624944877,
+          "t_stat": 23.296468045358882,
+          "net_pnl": 19248.615726000324,
+          "total_return": 0.19248615726000323,
+          "fees": 0.0,
+          "worst_trade": -402.24046800000195,
+          "worst_trade_r": -1.0703890909091462,
+          "best_trade": 143.09999999999866,
+          "largest_loss_vs_avg_win": 6.289380684851161,
+          "longest_losing_streak": 2,
+          "avg_bars_held": 1.675531914893617,
+          "long_share": 0.6143617021276596,
+          "exits": {
+            "session_end": {
+              "trades": 1,
+              "win_rate": 1.0,
+              "pnl": 39.10000000000039
+            },
+            "stop": {
+              "trades": 10,
+              "win_rate": 0.0,
+              "pnl": -1479.1542739999975
+            },
+            "target": {
+              "trades": 320,
+              "win_rate": 1.0,
+              "pnl": 21245.170000000253
+            },
+            "time": {
+              "trades": 45,
+              "win_rate": 0.4666666666666667,
+              "pnl": -556.4999999999319
+            }
+          }
+        }
+      },
+      {
+        "fold": 6,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1457,
+          "win_rate": 0.9045984900480439,
+          "win_rate_ci_low": 0.8884322989978657,
+          "win_rate_ci_high": 0.9186367220376799,
+          "avg_win": 67.91937784522071,
+          "avg_loss": -78.84918976258928,
+          "payoff_ratio": 0.8613833325329322,
+          "profit_factor": 8.167649153082047,
+          "expectancy": 53.91743488194988,
+          "expectancy_bps": 21.67417457603766,
+          "expectancy_r": 0.390603540698954,
+          "t_stat": 45.01573911133252,
+          "net_pnl": 78557.70262300098,
+          "total_return": 0.7855770262300098,
+          "fees": 0.0,
+          "worst_trade": -402.24046800000195,
+          "worst_trade_r": -1.0703890909091462,
+          "best_trade": 194.8800000000045,
+          "largest_loss_vs_avg_win": 5.922322623694447,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.7110501029512697,
+          "long_share": 0.577213452299245,
+          "exits": {
+            "session_end": {
+              "trades": 5,
+              "win_rate": 1.0,
+              "pnl": 80.35000000001256
+            },
+            "stop": {
+              "trades": 37,
+              "win_rate": 0.0,
+              "pnl": -5727.937376999993
+            },
+            "target": {
+              "trades": 1239,
+              "win_rate": 1.0,
+              "pnl": 87036.4500000008
+            },
+            "time": {
+              "trades": 176,
+              "win_rate": 0.42045454545454547,
+              "pnl": -2831.1599999998416
+            }
+          }
+        },
+        "oos": {
+          "trades": 277,
+          "win_rate": 0.927797833935018,
+          "win_rate_ci_low": 0.8911145825074583,
+          "win_rate_ci_high": 0.9527774904617884,
+          "avg_win": 70.8518677042808,
+          "avg_loss": -109.56477859999941,
+          "payoff_ratio": 0.6466664617006873,
+          "profit_factor": 8.309664032853833,
+          "expectancy": 57.82539504693206,
+          "expectancy_bps": 23.23472001199116,
+          "expectancy_r": 0.39324874119839986,
+          "t_stat": 19.398424397936466,
+          "net_pnl": 16017.63442800018,
+          "total_return": 0.1601763442800018,
+          "fees": 0.0,
+          "worst_trade": -273.0793999999985,
+          "worst_trade_r": -1.0542779310344939,
+          "best_trade": 203.35999999999567,
+          "largest_loss_vs_avg_win": 3.854230083810469,
+          "longest_losing_streak": 2,
+          "avg_bars_held": 1.8303249097472925,
+          "long_share": 0.49097472924187724,
+          "exits": {
+            "session_end": {
+              "trades": 1,
+              "win_rate": 1.0,
+              "pnl": 10.200000000000387
+            },
+            "stop": {
+              "trades": 10,
+              "win_rate": 0.0,
+              "pnl": -1525.9255720000024
+            },
+            "target": {
+              "trades": 230,
+              "win_rate": 1.0,
+              "pnl": 17176.180000000142
+            },
+            "time": {
+              "trades": 36,
+              "win_rate": 0.7222222222222222,
+              "pnl": 357.1800000000409
+            }
+          }
+        }
+      },
+      {
+        "fold": 7,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1332,
+          "win_rate": 0.9129129129129129,
+          "win_rate_ci_low": 0.8965582683466872,
+          "win_rate_ci_high": 0.9268926557748555,
+          "avg_win": 68.62830592105341,
+          "avg_loss": -82.0989512586199,
+          "payoff_ratio": 0.8359218341884463,
+          "profit_factor": 8.762766813561646,
+          "expectancy": 55.501908148649434,
+          "expectancy_bps": 22.302596453324124,
+          "expectancy_r": 0.39505427849193353,
+          "t_stat": 43.9480599605234,
+          "net_pnl": 73928.54165400105,
+          "total_return": 0.7392854165400105,
+          "fees": 0.0,
+          "worst_trade": -402.24046800000195,
+          "worst_trade_r": -1.0703890909091462,
+          "best_trade": 203.35999999999567,
+          "largest_loss_vs_avg_win": 5.861145231571348,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.7237237237237237,
+          "long_share": 0.5698198198198198,
+          "exits": {
+            "session_end": {
+              "trades": 4,
+              "win_rate": 1.0,
+              "pnl": 78.91000000000511
+            },
+            "stop": {
+              "trades": 36,
+              "win_rate": 0.0,
+              "pnl": -5358.898345999997
+            },
+            "target": {
+              "trades": 1134,
+              "win_rate": 1.0,
+              "pnl": 80641.60000000085
+            },
+            "time": {
+              "trades": 158,
+              "win_rate": 0.4936708860759494,
+              "pnl": -1433.0699999998155
+            }
+          }
+        },
+        "oos": {
+          "trades": 370,
+          "win_rate": 0.8945945945945946,
+          "win_rate_ci_low": 0.8591483473579731,
+          "win_rate_ci_high": 0.9219311258734701,
+          "avg_win": 63.26894259818811,
+          "avg_loss": -66.18633246153783,
+          "payoff_ratio": 0.9559215663589599,
+          "profit_factor": 8.11307790935425,
+          "expectancy": 49.62365684864944,
+          "expectancy_bps": 19.971457805161933,
+          "expectancy_r": 0.3916833907743414,
+          "t_stat": 24.309821417727537,
+          "net_pnl": 18360.753034000292,
+          "total_return": 0.18360753034000293,
+          "fees": 0.0,
+          "worst_trade": -339.9729090000003,
+          "worst_trade_r": -1.0746733333333316,
+          "best_trade": 199.2100000000022,
+          "largest_loss_vs_avg_win": 5.373456470722436,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.718918918918919,
+          "long_share": 0.7513513513513513,
+          "exits": {
+            "session_end": {
+              "trades": 2,
+              "win_rate": 0.5,
+              "pnl": -25.799999999993474
+            },
+            "stop": {
+              "trades": 7,
+              "win_rate": 0.0,
+              "pnl": -1331.7769659999958
+            },
+            "target": {
+              "trades": 308,
+              "win_rate": 1.0,
+              "pnl": 20306.960000000225
+            },
+            "time": {
+              "trades": 53,
+              "win_rate": 0.41509433962264153,
+              "pnl": -588.6299999999445
+            }
+          }
+        }
+      },
+      {
+        "fold": 8,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1418,
+          "win_rate": 0.9139633286318759,
+          "win_rate_ci_low": 0.898226071004885,
+          "win_rate_ci_high": 0.927463654207825,
+          "avg_win": 61.03122685185266,
+          "avg_loss": -70.28802355737595,
+          "payoff_ratio": 0.868301934852856,
+          "profit_factor": 9.223928750568044,
+          "expectancy": 49.73295566008546,
+          "expectancy_bps": 20.01445603742606,
+          "expectancy_r": 0.4004643048184408,
+          "t_stat": 47.21214495384829,
+          "net_pnl": 70521.33112600118,
+          "total_return": 0.7052133112600119,
+          "fees": 0.0,
+          "worst_trade": -208.55811200000338,
+          "worst_trade_r": -1.0703890909091462,
+          "best_trade": 105.6000000000015,
+          "largest_loss_vs_avg_win": 3.417236106137237,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.6001410437235544,
+          "long_share": 0.6480959097320169,
+          "exits": {
+            "session_end": {
+              "trades": 4,
+              "win_rate": 0.75,
+              "pnl": 30.6000000000071
+            },
+            "stop": {
+              "trades": 33,
+              "win_rate": 0.0,
+              "pnl": -4170.908873999992
+            },
+            "target": {
+              "trades": 1222,
+              "win_rate": 1.0,
+              "pnl": 77074.22000000096
+            },
+            "time": {
+              "trades": 159,
+              "win_rate": 0.44654088050314467,
+              "pnl": -2412.57999999979
+            }
+          }
+        },
+        "oos": {
+          "trades": 371,
+          "win_rate": 0.8679245283018868,
+          "win_rate_ci_low": 0.829671495973512,
+          "win_rate_ci_high": 0.8986361411724185,
+          "avg_win": 59.947763975155674,
+          "avg_loss": -50.58868620408072,
+          "payoff_ratio": 1.185003376709949,
+          "profit_factor": 7.7871650469510945,
+          "expectancy": 45.34861017789804,
+          "expectancy_bps": 18.251553124854222,
+          "expectancy_r": 0.3636091875345315,
+          "t_stat": 20.219471097984695,
+          "net_pnl": 16824.334376000174,
+          "total_return": 0.16824334376000175,
+          "fees": 0.0,
+          "worst_trade": -149.57317799999961,
+          "worst_trade_r": -1.0467329341317209,
+          "best_trade": 103.3599999999978,
+          "largest_loss_vs_avg_win": 2.495058498962324,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.935309973045822,
+          "long_share": 0.5956873315363881,
+          "exits": {
+            "session_end": {
+              "trades": 2,
+              "win_rate": 0.5,
+              "pnl": -31.539999999999736
+            },
+            "stop": {
+              "trades": 7,
+              "win_rate": 0.0,
+              "pnl": -780.9056239999968
+            },
+            "target": {
+              "trades": 298,
+              "win_rate": 1.0,
+              "pnl": 18667.950000000095
+            },
+            "time": {
+              "trades": 64,
+              "win_rate": 0.359375,
+              "pnl": -1031.1699999999234
+            }
+          }
+        }
+      },
+      {
+        "fold": 9,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1410,
+          "win_rate": 0.902127659574468,
+          "win_rate_ci_low": 0.8855076647517651,
+          "win_rate_ci_high": 0.9165623832649291,
+          "avg_win": 60.30334119496922,
+          "avg_loss": -61.92001509420189,
+          "payoff_ratio": 0.9738909317645814,
+          "profit_factor": 8.976733805830055,
+          "expectancy": 48.34105526028439,
+          "expectancy_bps": 19.457078997571696,
+          "expectancy_r": 0.39082773594053677,
+          "t_stat": 45.17956828648497,
+          "net_pnl": 68160.88791700099,
+          "total_return": 0.6816088791700099,
+          "fees": 0.0,
+          "worst_trade": -196.0059749999985,
+          "worst_trade_r": -1.0703890909091462,
+          "best_trade": 105.6000000000015,
+          "largest_loss_vs_avg_win": 3.250333582119165,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.6808510638297873,
+          "long_share": 0.6319148936170212,
+          "exits": {
+            "session_end": {
+              "trades": 6,
+              "win_rate": 0.6666666666666666,
+              "pnl": -0.9399999999926365
+            },
+            "stop": {
+              "trades": 31,
+              "win_rate": 0.0,
+              "pnl": -3737.262082999988
+            },
+            "target": {
+              "trades": 1191,
+              "win_rate": 1.0,
+              "pnl": 74624.80000000075
+            },
+            "time": {
+              "trades": 182,
+              "win_rate": 0.4230769230769231,
+              "pnl": -2725.709999999774
+            }
+          }
+        },
+        "oos": {
+          "trades": 316,
+          "win_rate": 0.8829113924050633,
+          "win_rate_ci_low": 0.8427759466901593,
+          "win_rate_ci_high": 0.913848582451766,
+          "avg_win": 62.025627240143756,
+          "avg_loss": -59.99899548648539,
+          "payoff_ratio": 1.0337777613979364,
+          "profit_factor": 7.795243119730384,
+          "expectancy": 47.73793407278528,
+          "expectancy_bps": 19.216133258271917,
+          "expectancy_r": 0.36842189394185243,
+          "t_stat": 19.67202298863302,
+          "net_pnl": 15085.18716700015,
+          "total_return": 0.1508518716700015,
+          "fees": 0.0,
+          "worst_trade": -209.86691000000286,
+          "worst_trade_r": -1.0661689075630592,
+          "best_trade": 103.04000000000238,
+          "largest_loss_vs_avg_win": 3.383551595334362,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.8449367088607596,
+          "long_share": 0.5443037974683544,
+          "exits": {
+            "session_end": {
+              "trades": 6,
+              "win_rate": 0.6666666666666666,
+              "pnl": 125.1600000000017
+            },
+            "stop": {
+              "trades": 5,
+              "win_rate": 0.0,
+              "pnl": -668.6828330000012
+            },
+            "target": {
+              "trades": 250,
+              "win_rate": 1.0,
+              "pnl": 16413.430000000088
+            },
+            "time": {
+              "trades": 55,
+              "win_rate": 0.45454545454545453,
+              "pnl": -784.719999999938
+            }
+          }
+        }
+      },
+      {
+        "fold": 10,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1350,
+          "win_rate": 0.9,
+          "win_rate_ci_low": 0.8828441095827824,
+          "win_rate_ci_high": 0.9148858464179788,
+          "avg_win": 60.70739094650263,
+          "avg_loss": -57.13311823703602,
+          "payoff_ratio": 1.0625604346438353,
+          "profit_factor": 9.563043911794518,
+          "expectancy": 48.92334002814876,
+          "expectancy_bps": 19.69084425687768,
+          "expectancy_r": 0.38952166993653015,
+          "t_stat": 45.06122820075298,
+          "net_pnl": 66046.50903800082,
+          "total_return": 0.6604650903800082,
+          "fees": 0.0,
+          "worst_trade": -209.86691000000286,
+          "worst_trade_r": -1.0661689075630592,
+          "best_trade": 103.62000000000282,
+          "largest_loss_vs_avg_win": 3.4570240415198303,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.7437037037037038,
+          "long_share": 0.617037037037037,
+          "exits": {
+            "session_end": {
+              "trades": 12,
+              "win_rate": 0.6666666666666666,
+              "pnl": 124.22000000000907
+            },
+            "stop": {
+              "trades": 24,
+              "win_rate": 0.0,
+              "pnl": -2859.610961999997
+            },
+            "target": {
+              "trades": 1122,
+              "win_rate": 1.0,
+              "pnl": 71173.15000000059
+            },
+            "time": {
+              "trades": 192,
+              "win_rate": 0.4427083333333333,
+              "pnl": -2391.249999999771
+            }
+          }
+        },
+        "oos": {
+          "trades": 346,
+          "win_rate": 0.8930635838150289,
+          "win_rate_ci_low": 0.8560774465044514,
+          "win_rate_ci_high": 0.9214172825386355,
+          "avg_win": 62.757152103559996,
+          "avg_loss": -80.93868348648513,
+          "payoff_ratio": 0.7753666034614829,
+          "profit_factor": 6.475358931610764,
+          "expectancy": 47.390834424855754,
+          "expectancy_bps": 19.064855364957413,
+          "expectancy_r": 0.37956133814686027,
+          "t_stat": 19.202975543583722,
+          "net_pnl": 16397.22871100009,
+          "total_return": 0.16397228711000092,
+          "fees": 0.0,
+          "worst_trade": -196.55836199999786,
+          "worst_trade_r": -1.0461986301369923,
+          "best_trade": 103.22000000000203,
+          "largest_loss_vs_avg_win": 3.1320471916195793,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.6502890173410405,
+          "long_share": 0.6184971098265896,
+          "exits": {
+            "session_end": {
+              "trades": 1,
+              "win_rate": 1.0,
+              "pnl": 16.56000000000131
+            },
+            "stop": {
+              "trades": 13,
+              "win_rate": 0.0,
+              "pnl": -1767.9912889999832
+            },
+            "target": {
+              "trades": 297,
+              "win_rate": 1.0,
+              "pnl": 19030.550000000032
+            },
+            "time": {
+              "trades": 35,
+              "win_rate": 0.3142857142857143,
+              "pnl": -881.8899999999608
+            }
+          }
+        }
+      },
+      {
+        "fold": 11,
+        "playbook": "continuation",
+        "is": {
+          "trades": 6478,
+          "win_rate": 0.9029021302871256,
+          "win_rate_ci_low": 0.8954511010303897,
+          "win_rate_ci_high": 0.9098755826701189,
+          "avg_win": 32.94943238160411,
+          "avg_loss": -98.79665934181193,
+          "payoff_ratio": 0.3335075558335151,
+          "profit_factor": 3.1012491161688867,
+          "expectancy": 20.15716753226347,
+          "expectancy_bps": 8.114797430047393,
+          "expectancy_r": 0.21302801226106127,
+          "t_stat": 43.1020681002808,
+          "net_pnl": 130578.13127400275,
+          "total_return": 1.3057813127400275,
+          "fees": 0.0,
+          "worst_trade": -168.10302600000747,
+          "worst_trade_r": -1.1312333333333457,
+          "best_trade": 66.20000000000152,
+          "largest_loss_vs_avg_win": 5.101848919675488,
+          "longest_losing_streak": 5,
+          "avg_bars_held": 0.9555418338993517,
+          "long_share": 0.5824328496449521,
+          "exits": {
+            "session_end": {
+              "trades": 26,
+              "win_rate": 0.3076923076923077,
+              "pnl": -488.4299999999743
+            },
+            "stop": {
+              "trades": 566,
+              "win_rate": 0.0,
+              "pnl": -59177.49872599975
+            },
+            "target": {
+              "trades": 5837,
+              "win_rate": 1.0,
+              "pnl": 192534.34000000247
+            },
+            "time": {
+              "trades": 47,
+              "win_rate": 0.0851063829787234,
+              "pnl": -2111.199999999966
+            },
+            "trend_over": {
+              "trades": 2,
+              "win_rate": 0.0,
+              "pnl": -179.0799999999975
+            }
+          }
+        },
+        "oos": {
+          "trades": 1776,
+          "win_rate": 0.9065315315315315,
+          "win_rate_ci_low": 0.8921021301532717,
+          "win_rate_ci_high": 0.9192060222126468,
+          "avg_win": 32.300310559006654,
+          "avg_loss": -103.25847665060205,
+          "payoff_ratio": 0.31281025642380833,
+          "profit_factor": 3.0338826074839247,
+          "expectancy": 19.629838331081523,
+          "expectancy_bps": 7.911973875759676,
+          "expectancy_r": 0.21243828961114175,
+          "t_stat": 22.49942604709708,
+          "net_pnl": 34862.59287600078,
+          "total_return": 0.3486259287600078,
+          "fees": 0.0,
+          "worst_trade": -157.4834999999979,
+          "worst_trade_r": -1.095732098765428,
+          "best_trade": 54.159999999998846,
+          "largest_loss_vs_avg_win": 4.875603276702398,
+          "longest_losing_streak": 7,
+          "avg_bars_held": 0.8755630630630631,
+          "long_share": 0.4831081081081081,
+          "exits": {
+            "session_end": {
+              "trades": 1,
+              "win_rate": 0.0,
+              "pnl": -59.499999999999034
+            },
+            "stop": {
+              "trades": 160,
+              "win_rate": 0.0,
+              "pnl": -16786.00712399995
+            },
+            "target": {
+              "trades": 1610,
+              "win_rate": 1.0,
+              "pnl": 52003.50000000071
+            },
+            "time": {
+              "trades": 5,
+              "win_rate": 0.0,
+              "pnl": -295.39999999999463
+            }
+          }
+        }
+      },
+      {
+        "fold": 12,
+        "playbook": "continuation",
+        "is": {
+          "trades": 6550,
+          "win_rate": 0.9042748091603053,
+          "win_rate_ci_low": 0.896910759504007,
+          "win_rate_ci_high": 0.9111649193466994,
+          "avg_win": 32.852681073780545,
+          "avg_loss": -100.20684420733618,
+          "payoff_ratio": 0.32784867474526647,
+          "profit_factor": 3.097045774348027,
+          "expectancy": 20.115532623206466,
+          "expectancy_bps": 8.101330544320051,
+          "expectancy_r": 0.21350460579552868,
+          "t_stat": 43.5500820701269,
+          "net_pnl": 131756.73868200235,
+          "total_return": 1.3175673868200235,
+          "fees": 0.0,
+          "worst_trade": -168.10302600000747,
+          "worst_trade_r": -1.130288888888878,
+          "best_trade": 66.20000000000152,
+          "largest_loss_vs_avg_win": 5.116873889911199,
+          "longest_losing_streak": 7,
+          "avg_bars_held": 0.9410687022900763,
+          "long_share": 0.5341984732824427,
+          "exits": {
+            "session_end": {
+              "trades": 22,
+              "win_rate": 0.3181818181818182,
+              "pnl": -386.9099999999784
+            },
+            "stop": {
+              "trades": 574,
+              "win_rate": 0.0,
+              "pnl": -60298.72131799981
+            },
+            "target": {
+              "trades": 5913,
+              "win_rate": 1.0,
+              "pnl": 194452.6900000021
+            },
+            "time": {
+              "trades": 40,
+              "win_rate": 0.075,
+              "pnl": -1930.2399999999752
+            },
+            "trend_over": {
+              "trades": 1,
+              "win_rate": 0.0,
+              "pnl": -80.08000000000033
+            }
+          }
+        },
+        "oos": {
+          "trades": 1395,
+          "win_rate": 0.8853046594982079,
+          "win_rate_ci_low": 0.8675139930472003,
+          "win_rate_ci_high": 0.9009790228882709,
+          "avg_win": 33.35554655870502,
+          "avg_loss": -101.46717839999961,
+          "payoff_ratio": 0.328732375184537,
+          "profit_factor": 2.537403020955645,
+          "expectancy": 17.892008212186926,
+          "expectancy_bps": 7.198770621288547,
+          "expectancy_r": 0.18555988556911326,
+          "t_stat": 15.909245865935155,
+          "net_pnl": 24959.351456000764,
+          "total_return": 0.24959351456000764,
+          "fees": 0.0,
+          "worst_trade": -156.48093999999963,
+          "worst_trade_r": -1.089500000000012,
+          "best_trade": 59.099999999998744,
+          "largest_loss_vs_avg_win": 4.6913019315871995,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.0043010752688173,
+          "long_share": 0.5225806451612903,
+          "exits": {
+            "session_end": {
+              "trades": 3,
+              "win_rate": 0.6666666666666666,
+              "pnl": -34.76999999998827
+            },
+            "stop": {
+              "trades": 153,
+              "win_rate": 0.0,
+              "pnl": -15875.398543999949
+            },
+            "target": {
+              "trades": 1232,
+              "win_rate": 1.0,
+              "pnl": 41168.35000000069
+            },
+            "time": {
+              "trades": 7,
+              "win_rate": 0.14285714285714285,
+              "pnl": -298.82999999999197
+            }
+          }
+        }
+      },
+      {
+        "fold": 13,
+        "playbook": "continuation",
+        "is": {
+          "trades": 3530,
+          "win_rate": 0.9093484419263456,
+          "win_rate_ci_low": 0.8994265798143087,
+          "win_rate_ci_high": 0.9183803077383194,
+          "avg_win": 35.86613395638671,
+          "avg_loss": -91.98741536562434,
+          "payoff_ratio": 0.3899026167202201,
+          "profit_factor": 3.911210623974708,
+          "expectancy": 24.27601050509959,
+          "expectancy_bps": 9.766815650408232,
+          "expectancy_r": 0.23522939879275373,
+          "t_stat": 40.56624209717681,
+          "net_pnl": 85694.31708300154,
+          "total_return": 0.8569431708300155,
+          "fees": 0.0,
+          "worst_trade": -290.98369300000195,
+          "worst_trade_r": -1.095732098765428,
+          "best_trade": 96.0000000000008,
+          "largest_loss_vs_avg_win": 8.113048742689655,
+          "longest_losing_streak": 5,
+          "avg_bars_held": 0.8390934844192635,
+          "long_share": 0.5368271954674221,
+          "exits": {
+            "session_end": {
+              "trades": 10,
+              "win_rate": 0.6,
+              "pnl": -93.32999999998918
+            },
+            "stop": {
+              "trades": 196,
+              "win_rate": 0.0,
+              "pnl": -22954.082916999876
+            },
+            "target": {
+              "trades": 3169,
+              "win_rate": 1.0,
+              "pnl": 114523.60000000132
+            },
+            "time": {
+              "trades": 155,
+              "win_rate": 0.22580645161290322,
+              "pnl": -5781.869999999884
+            }
+          }
+        },
+        "oos": {
+          "trades": 869,
+          "win_rate": 0.9021864211737629,
+          "win_rate_ci_low": 0.8806292539107522,
+          "win_rate_ci_high": 0.9202033370198358,
+          "avg_win": 33.76186224489864,
+          "avg_loss": -76.01934547058754,
+          "payoff_ratio": 0.4441219802130677,
+          "profit_factor": 4.096372146906413,
+          "expectancy": 23.023769430380433,
+          "expectancy_bps": 9.262661360441745,
+          "expectancy_r": 0.23522224551392268,
+          "t_stat": 20.271070321838124,
+          "net_pnl": 20007.655635000596,
+          "total_return": 0.20007655635000596,
+          "fees": 0.0,
+          "worst_trade": -202.7385120000011,
+          "worst_trade_r": -1.0917354430379163,
+          "best_trade": 91.51999999999953,
+          "largest_loss_vs_avg_win": 6.004956436626494,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 0.85385500575374,
+          "long_share": 0.5569620253164557,
+          "exits": {
+            "stop": {
+              "trades": 49,
+              "win_rate": 0.0,
+              "pnl": -5237.334364999986
+            },
+            "target": {
+              "trades": 773,
+              "win_rate": 1.0,
+              "pnl": 26322.780000000508
+            },
+            "time": {
+              "trades": 47,
+              "win_rate": 0.23404255319148937,
+              "pnl": -1077.7899999999279
+            }
+          }
+        }
+      },
+      {
+        "fold": 14,
+        "playbook": "continuation",
+        "is": {
+          "trades": 4506,
+          "win_rate": 0.9050155348424324,
+          "win_rate_ci_low": 0.8961064184942058,
+          "win_rate_ci_high": 0.913234645724103,
+          "avg_win": 51.77491172143255,
+          "avg_loss": -122.07803593224234,
+          "payoff_ratio": 0.4241132430257108,
+          "profit_factor": 4.040966834249646,
+          "expectancy": 35.26158247248163,
+          "expectancy_bps": 14.193056703596362,
+          "expectancy_r": 0.2597097642091955,
+          "t_stat": 45.69399346587148,
+          "net_pnl": 158888.6906210022,
+          "total_return": 1.588886906210022,
+          "fees": 0.0,
+          "worst_trade": -245.2512600000009,
+          "worst_trade_r": -1.0716944444444427,
+          "best_trade": 93.94000000000038,
+          "largest_loss_vs_avg_win": 4.736874517904346,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.698180204172215,
+          "long_share": 0.5463826009764758,
+          "exits": {
+            "session_end": {
+              "trades": 17,
+              "win_rate": 0.4117647058823529,
+              "pnl": -371.499999999991
+            },
+            "stop": {
+              "trades": 320,
+              "win_rate": 0.0,
+              "pnl": -44976.32937899984
+            },
+            "target": {
+              "trades": 4050,
+              "win_rate": 1.0,
+              "pnl": 210545.12000000192
+            },
+            "time": {
+              "trades": 116,
+              "win_rate": 0.1810344827586207,
+              "pnl": -5997.4699999998875
+            },
+            "trend_over": {
+              "trades": 3,
+              "win_rate": 0.0,
+              "pnl": -311.1299999999984
+            }
+          }
+        },
+        "oos": {
+          "trades": 1117,
+          "win_rate": 0.9042076991942704,
+          "win_rate_ci_low": 0.8855367769037186,
+          "win_rate_ci_high": 0.920107838713689,
+          "avg_win": 52.90994059406012,
+          "avg_loss": -124.50582993457878,
+          "payoff_ratio": 0.42495954303394057,
+          "profit_factor": 4.011300359479252,
+          "expectancy": 35.91487573590043,
+          "expectancy_bps": 14.450613069293953,
+          "expectancy_r": 0.25690885765520305,
+          "t_stat": 22.350487912513582,
+          "net_pnl": 40116.916197000784,
+          "total_return": 0.40116916197000785,
+          "fees": 0.0,
+          "worst_trade": -240.85445399999446,
+          "worst_trade_r": -1.0659690909091433,
+          "best_trade": 93.23999999999985,
+          "largest_loss_vs_avg_win": 4.5521588437964295,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.5872873769024172,
+          "long_share": 0.6678603401969562,
+          "exits": {
+            "session_end": {
+              "trades": 6,
+              "win_rate": 0.3333333333333333,
+              "pnl": -39.88999999999575
+            },
+            "stop": {
+              "trades": 80,
+              "win_rate": 0.0,
+              "pnl": -11383.423802999958
+            },
+            "target": {
+              "trades": 1001,
+              "win_rate": 1.0,
+              "pnl": 53278.570000000705
+            },
+            "time": {
+              "trades": 30,
+              "win_rate": 0.23333333333333334,
+              "pnl": -1738.3399999999647
+            }
+          }
+        }
+      },
+      {
+        "fold": 15,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1454,
+          "win_rate": 0.9085281980742779,
+          "win_rate_ci_low": 0.8926142042689721,
+          "win_rate_ci_high": 0.9222891432552033,
+          "avg_win": 61.41320968962973,
+          "avg_loss": -67.73175671428459,
+          "payoff_ratio": 0.9067121933466362,
+          "profit_factor": 9.005765469254936,
+          "expectancy": 49.60008690302684,
+          "expectancy_bps": 19.968124734267306,
+          "expectancy_r": 0.39426617824394267,
+          "t_stat": 45.91815834998052,
+          "net_pnl": 72118.52635700103,
+          "total_return": 0.7211852635700103,
+          "fees": 0.0,
+          "worst_trade": -199.8912699999981,
+          "worst_trade_r": -1.0683433962264361,
+          "best_trade": 104.05999999999946,
+          "largest_loss_vs_avg_win": 3.254857888232991,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.6595598349381018,
+          "long_share": 0.5412654745529574,
+          "exits": {
+            "session_end": {
+              "trades": 2,
+              "win_rate": 1.0,
+              "pnl": 56.190000000005
+            },
+            "stop": {
+              "trades": 42,
+              "win_rate": 0.0,
+              "pnl": -5316.123642999954
+            },
+            "target": {
+              "trades": 1243,
+              "win_rate": 1.0,
+              "pnl": 78990.63000000079
+            },
+            "time": {
+              "trades": 167,
+              "win_rate": 0.4550898203592814,
+              "pnl": -1612.1699999998186
+            }
+          }
+        },
+        "oos": {
+          "trades": 376,
+          "win_rate": 0.8696808510638298,
+          "win_rate_ci_low": 0.831879942314277,
+          "win_rate_ci_high": 0.9000040851329535,
+          "avg_win": 58.368103975535576,
+          "avg_loss": -58.52491938775432,
+          "payoff_ratio": 0.9973205360407287,
+          "profit_factor": 6.6555880670473115,
+          "expectancy": 43.13470465425577,
+          "expectancy_bps": 17.375393613963677,
+          "expectancy_r": 0.3624605414875574,
+          "t_stat": 19.5525620722376,
+          "net_pnl": 16218.64895000017,
+          "total_return": 0.1621864895000017,
+          "fees": 0.0,
+          "worst_trade": -189.72779899999975,
+          "worst_trade_r": -1.048878362573089,
+          "best_trade": 103.01999999999673,
+          "largest_loss_vs_avg_win": 3.250539011503994,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.8164893617021276,
+          "long_share": 0.5957446808510638,
+          "exits": {
+            "session_end": {
+              "trades": 2,
+              "win_rate": 0.0,
+              "pnl": -8.25
+            },
+            "stop": {
+              "trades": 11,
+              "win_rate": 0.0,
+              "pnl": -1414.131049999993
+            },
+            "target": {
+              "trades": 305,
+              "win_rate": 1.0,
+              "pnl": 18393.790000000117
+            },
+            "time": {
+              "trades": 58,
+              "win_rate": 0.3793103448275862,
+              "pnl": -752.7599999999529
+            }
+          }
+        }
+      },
+      {
+        "fold": 16,
+        "playbook": "continuation",
+        "is": {
+          "trades": 4397,
+          "win_rate": 0.9001591994541733,
+          "win_rate_ci_low": 0.8909456947260994,
+          "win_rate_ci_high": 0.9086740870901786,
+          "avg_win": 51.22521475492737,
+          "avg_loss": -121.71980958314285,
+          "payoff_ratio": 0.420845340872285,
+          "profit_factor": 3.7943185858143598,
+          "expectancy": 33.95824507459696,
+          "expectancy_bps": 13.665598153037882,
+          "expectancy_r": 0.25324407808336497,
+          "t_stat": 42.99684491883846,
+          "net_pnl": 149314.40359300282,
+          "total_return": 1.493144035930028,
+          "fees": 0.0,
+          "worst_trade": -242.77100999999976,
+          "worst_trade_r": -1.0762837837837356,
+          "best_trade": 93.94000000000038,
+          "largest_loss_vs_avg_win": 4.739287305313787,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.6906982033204458,
+          "long_share": 0.5904025471912667,
+          "exits": {
+            "session_end": {
+              "trades": 20,
+              "win_rate": 0.4,
+              "pnl": -174.16999999999265
+            },
+            "stop": {
+              "trades": 332,
+              "win_rate": 0.0,
+              "pnl": -46406.676406999846
+            },
+            "target": {
+              "trades": 3928,
+              "win_rate": 1.0,
+              "pnl": 202113.0600000025
+            },
+            "time": {
+              "trades": 116,
+              "win_rate": 0.1896551724137931,
+              "pnl": -6068.649999999835
+            },
+            "trend_over": {
+              "trades": 1,
+              "win_rate": 0.0,
+              "pnl": -149.1599999999994
+            }
+          }
+        },
+        "oos": {
+          "trades": 1096,
+          "win_rate": 0.8941605839416058,
+          "win_rate_ci_low": 0.874550584439243,
+          "win_rate_ci_high": 0.911017082759379,
+          "avg_win": 51.79631632653112,
+          "avg_loss": -116.77864554310327,
+          "payoff_ratio": 0.4435427049666626,
+          "profit_factor": 3.7471711281666322,
+          "expectancy": 33.954440800182944,
+          "expectancy_bps": 13.675836321276643,
+          "expectancy_r": 0.2516443821006266,
+          "t_stat": 21.727842346689528,
+          "net_pnl": 37214.06711700051,
+          "total_return": 0.3721406711700051,
+          "fees": 0.0,
+          "worst_trade": -246.72414000000256,
+          "worst_trade_r": -1.0683631147540833,
+          "best_trade": 96.67000000000039,
+          "largest_loss_vs_avg_win": 4.763353023883389,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.7125912408759123,
+          "long_share": 0.47536496350364965,
+          "exits": {
+            "session_end": {
+              "trades": 6,
+              "win_rate": 0.3333333333333333,
+              "pnl": -156.20999999999577
+            },
+            "stop": {
+              "trades": 76,
+              "win_rate": 0.0,
+              "pnl": -11143.792882999993
+            },
+            "target": {
+              "trades": 969,
+              "win_rate": 1.0,
+              "pnl": 50554.89000000048
+            },
+            "time": {
+              "trades": 45,
+              "win_rate": 0.2,
+              "pnl": -2040.819999999982
+            }
+          }
+        }
+      },
+      {
+        "fold": 17,
+        "playbook": "continuation",
+        "is": {
+          "trades": 2039,
+          "win_rate": 0.9195684158901423,
+          "win_rate_ci_low": 0.9069595100256052,
+          "win_rate_ci_high": 0.9305993100023402,
+          "avg_win": 51.67816533333394,
+          "avg_loss": -77.15938306707203,
+          "payoff_ratio": 0.6697586641978704,
+          "profit_factor": 7.657301801042727,
+          "expectancy": 41.315557222658825,
+          "expectancy_bps": 16.630583606035675,
+          "expectancy_r": 0.24127933713753164,
+          "t_stat": 49.50066455296767,
+          "net_pnl": 84242.42117700135,
+          "total_return": 0.8424242117700135,
+          "fees": 0.0,
+          "worst_trade": -402.27421300000213,
+          "worst_trade_r": -1.0479901639344056,
+          "best_trade": 129.71999999999724,
+          "largest_loss_vs_avg_win": 7.784220093829906,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.256988719960765,
+          "long_share": 0.5654732712113781,
+          "exits": {
+            "session_end": {
+              "trades": 6,
+              "win_rate": 0.6666666666666666,
+              "pnl": 58.55000000000757
+            },
+            "stop": {
+              "trades": 26,
+              "win_rate": 0.0,
+              "pnl": -5156.028822999979
+            },
+            "target": {
+              "trades": 1813,
+              "win_rate": 1.0,
+              "pnl": 95114.65000000109
+            },
+            "time": {
+              "trades": 194,
+              "win_rate": 0.29896907216494845,
+              "pnl": -5774.74999999978
+            }
+          }
+        },
+        "oos": {
+          "trades": 437,
+          "win_rate": 0.9130434782608695,
+          "win_rate_ci_low": 0.8828956091547894,
+          "win_rate_ci_high": 0.9359926264382218,
+          "avg_win": 51.19265664160449,
+          "avg_loss": -99.92654318420982,
+          "payoff_ratio": 0.5123028878046274,
+          "profit_factor": 5.379180321948588,
+          "expectancy": 38.05185665675107,
+          "expectancy_bps": 15.310673258617522,
+          "expectancy_r": 0.228748213205049,
+          "t_stat": 18.70121123963314,
+          "net_pnl": 16628.661359000216,
+          "total_return": 0.16628661359000216,
+          "fees": 0.0,
+          "worst_trade": -402.3216400000008,
+          "worst_trade_r": -1.0313893939394005,
+          "best_trade": 129.00000000000182,
+          "largest_loss_vs_avg_win": 7.858971704020382,
+          "longest_losing_streak": 2,
+          "avg_bars_held": 1.299771167048055,
+          "long_share": 0.5720823798627003,
+          "exits": {
+            "session_end": {
+              "trades": 3,
+              "win_rate": 0.3333333333333333,
+              "pnl": -94.75999999999445
+            },
+            "stop": {
+              "trades": 7,
+              "win_rate": 0.0,
+              "pnl": -1579.858640999996
+            },
+            "target": {
+              "trades": 392,
+              "win_rate": 1.0,
+              "pnl": 20282.79000000019
+            },
+            "time": {
+              "trades": 35,
+              "win_rate": 0.17142857142857143,
+              "pnl": -1979.5099999999843
+            }
+          }
+        }
+      },
+      {
+        "fold": 18,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1958,
+          "win_rate": 0.9198161389172625,
+          "win_rate_ci_low": 0.9069483779172016,
+          "win_rate_ci_high": 0.9310397654680749,
+          "avg_win": 52.423098278734585,
+          "avg_loss": -83.20619566241945,
+          "payoff_ratio": 0.63003839872001,
+          "profit_factor": 7.2273831598390945,
+          "expectancy": 41.54781781460732,
+          "expectancy_bps": 16.742475575515922,
+          "expectancy_r": 0.23939410961771368,
+          "t_stat": 46.74727073616721,
+          "net_pnl": 81350.62728100113,
+          "total_return": 0.8135062728100113,
+          "fees": 0.0,
+          "worst_trade": -402.3216400000008,
+          "worst_trade_r": -1.0479901639344056,
+          "best_trade": 129.71999999999724,
+          "largest_loss_vs_avg_win": 7.674510916177621,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.2798774259448418,
+          "long_share": 0.575076608784474,
+          "exits": {
+            "session_end": {
+              "trades": 9,
+              "win_rate": 0.5555555555555556,
+              "pnl": -36.20999999998688
+            },
+            "stop": {
+              "trades": 26,
+              "win_rate": 0.0,
+              "pnl": -5440.092718999986
+            },
+            "target": {
+              "trades": 1745,
+              "win_rate": 1.0,
+              "pnl": 92770.77000000095
+            },
+            "time": {
+              "trades": 178,
+              "win_rate": 0.28651685393258425,
+              "pnl": -5943.839999999838
+            }
+          }
+        },
+        "oos": {
+          "trades": 364,
+          "win_rate": 0.8983516483516484,
+          "win_rate_ci_low": 0.8630309039415568,
+          "win_rate_ci_high": 0.9253519217094844,
+          "avg_win": 49.60929663608616,
+          "avg_loss": -95.42056554053934,
+          "payoff_ratio": 0.5199015155177391,
+          "profit_factor": 4.59480528579191,
+          "expectancy": 34.86725020604455,
+          "expectancy_bps": 14.04212416876516,
+          "expectancy_r": 0.21748403477498357,
+          "t_stat": 15.031479544808859,
+          "net_pnl": 12691.679075000216,
+          "total_return": 0.12691679075000217,
+          "fees": 0.0,
+          "worst_trade": -342.6560819999955,
+          "worst_trade_r": -1.0276634146341437,
+          "best_trade": 108.42000000000213,
+          "largest_loss_vs_avg_win": 6.90709413829393,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.3296703296703296,
+          "long_share": 0.6153846153846154,
+          "exits": {
+            "session_end": {
+              "trades": 1,
+              "win_rate": 1.0,
+              "pnl": 53.20000000000334
+            },
+            "stop": {
+              "trades": 9,
+              "win_rate": 0.0,
+              "pnl": -1945.6709249999944
+            },
+            "target": {
+              "trades": 319,
+              "win_rate": 1.0,
+              "pnl": 16003.19000000016
+            },
+            "time": {
+              "trades": 35,
+              "win_rate": 0.2,
+              "pnl": -1419.0399999999518
+            }
+          }
+        }
+      },
+      {
+        "fold": 19,
+        "playbook": "continuation",
+        "is": {
+          "trades": 1833,
+          "win_rate": 0.9105291871249318,
+          "win_rate_ci_low": 0.8965894673706755,
+          "win_rate_ci_high": 0.9227517322188808,
+          "avg_win": 51.75875374475785,
+          "avg_loss": -86.81512124999914,
+          "payoff_ratio": 0.5961951443425343,
+          "profit_factor": 6.067376194559083,
+          "expectancy": 39.36043650572885,
+          "expectancy_bps": 15.850061957815509,
+          "expectancy_r": 0.2307377292568983,
+          "t_stat": 40.42814966085907,
+          "net_pnl": 72147.68011500099,
+          "total_return": 0.7214768011500099,
+          "fees": 0.0,
+          "worst_trade": -402.3216400000008,
+          "worst_trade_r": -1.0418103448275895,
+          "best_trade": 129.71999999999724,
+          "largest_loss_vs_avg_win": 7.773016367125109,
+          "longest_losing_streak": 4,
+          "avg_bars_held": 1.3218767048554283,
+          "long_share": 0.5499181669394435,
+          "exits": {
+            "session_end": {
+              "trades": 9,
+              "win_rate": 0.5555555555555556,
+              "pnl": -52.00999999998615
+            },
+            "stop": {
+              "trades": 30,
+              "win_rate": 0.0,
+              "pnl": -6442.709884999983
+            },
+            "target": {
+              "trades": 1618,
+              "win_rate": 1.0,
+              "pnl": 84976.32000000081
+            },
+            "time": {
+              "trades": 176,
+              "win_rate": 0.26136363636363635,
+              "pnl": -6333.919999999846
+            }
+          }
+        },
+        "oos": {
+          "trades": 359,
+          "win_rate": 0.9025069637883009,
+          "win_rate_ci_low": 0.8674275712231669,
+          "win_rate_ci_high": 0.9290632390918576,
+          "avg_win": 53.75839506172905,
+          "avg_loss": -100.21569019999887,
+          "payoff_ratio": 0.5364269302984819,
+          "profit_factor": 4.96578072619166,
+          "expectancy": 38.74699399164415,
+          "expectancy_bps": 15.601193103659556,
+          "expectancy_r": 0.21583775545876077,
+          "t_stat": 14.532589278217019,
+          "net_pnl": 13910.17084300025,
+          "total_return": 0.1391017084300025,
+          "fees": 0.0,
+          "worst_trade": -310.1642249999975,
+          "worst_trade_r": -1.038321428571418,
+          "best_trade": 98.00000000000182,
+          "largest_loss_vs_avg_win": 5.769596072275704,
+          "longest_losing_streak": 3,
+          "avg_bars_held": 1.3286908077994428,
+          "long_share": 0.724233983286908,
+          "exits": {
+            "stop": {
+              "trades": 11,
+              "win_rate": 0.0,
+              "pnl": -1940.9491570000018
+            },
+            "target": {
+              "trades": 316,
+              "win_rate": 1.0,
+              "pnl": 17205.4400000002
+            },
+            "time": {
+              "trades": 32,
+              "win_rate": 0.25,
+              "pnl": -1354.319999999946
+            }
+          }
+        }
+      }
+    ]
+  },
+  "holdout": {
+    "trades": 5947,
+    "win_rate": 0.9144106272069952,
+    "win_rate_ci_low": 0.9070300691925776,
+    "win_rate_ci_high": 0.9212561348966056,
+    "avg_win": 52.19396653181375,
+    "avg_loss": -84.52075171119746,
+    "payoff_ratio": 0.617528423199045,
+    "profit_factor": 6.597484411309247,
+    "expectancy": 40.49263954582204,
+    "expectancy_bps": 16.296646911199915,
+    "expectancy_r": 0.23480539421134206,
+    "t_stat": 76.78117885503683,
+    "net_pnl": 240809.72737900366,
+    "total_return": 2.4080972737900366,
+    "fees": 0.0,
+    "worst_trade": -402.53812499999594,
+    "worst_trade_r": -1.0558960264900348,
+    "best_trade": 161.47000000000168,
+    "largest_loss_vs_avg_win": 7.712349755112733,
+    "longest_losing_streak": 6,
+    "avg_bars_held": 1.274592231377165,
+    "long_share": 0.583319320665882,
+    "exits": {
+      "session_end": {
+        "trades": 17,
+        "win_rate": 0.4117647058823529,
+        "pnl": -87.85999999998309
+      },
+      "stop": {
+        "trades": 94,
+        "win_rate": 0.0,
+        "pnl": -18038.09262099994
+      },
+      "target": {
+        "trades": 5276,
+        "win_rate": 1.0,
+        "pnl": 280102.600000003
+      },
+      "time": {
+        "trades": 560,
+        "win_rate": 0.2767857142857143,
+        "pnl": -21166.919999999445
+      }
+    },
+    "max_drawdown": 0.004589967692947283,
+    "days": 60,
+    "trades_per_day": 99.11666666666666,
+    "sharpe": 27.444165960827302,
+    "worst_day": 0.00218808705454121,
+    "profitable_days": 1.0,
+    "orders_placed": 5947,
+    "fill_rate": 1.0,
+    "breaker_halts": 0
+  },
+  "holdout_stress": {
+    "trades": 5899,
+    "win_rate": 0.9099847431768097,
+    "win_rate_ci_low": 0.9024117419887854,
+    "win_rate_ci_high": 0.9170241039603928,
+    "avg_win": 49.6868014157979,
+    "avg_loss": -86.41135652542332,
+    "payoff_ratio": 0.5750031409491808,
+    "profit_factor": 5.812837778936352,
+    "expectancy": 37.435890775555755,
+    "expectancy_bps": 15.069263582146673,
+    "expectancy_r": 0.2165968202872139,
+    "t_stat": 69.36079653703558,
+    "net_pnl": 220834.3196850034,
+    "total_return": 2.208343196850034,
+    "fees": 7797.9400000000005,
+    "worst_trade": -426.3643750000025,
+    "worst_trade_r": -1.1665848684210407,
+    "best_trade": 160.1300000000023,
+    "largest_loss_vs_avg_win": 8.581038884592802,
+    "longest_losing_streak": 6,
+    "avg_bars_held": 1.3044583827767418,
+    "long_share": 0.582641125614511,
+    "exits": {
+      "session_end": {
+        "trades": 17,
+        "win_rate": 0.4117647058823529,
+        "pnl": -164.83999999998267
+      },
+      "stop": {
+        "trades": 94,
+        "win_rate": 0.0,
+        "pnl": -18936.03031499998
+      },
+      "target": {
+        "trades": 5184,
+        "win_rate": 1.0,
+        "pnl": 261705.46000000308
+      },
+      "target_taker": {
+        "trades": 35,
+        "win_rate": 1.0,
+        "pnl": 1637.0900000000142
+      },
+      "time": {
+        "trades": 569,
+        "win_rate": 0.24956063268892795,
+        "pnl": -23407.359999999713
+      }
+    },
+    "max_drawdown": 0.004920754956442286,
+    "days": 60,
+    "trades_per_day": 98.31666666666666,
+    "sharpe": 28.055452310047766,
+    "worst_day": 0.0019717537514118977,
+    "profitable_days": 1.0,
+    "orders_placed": 5899,
+    "fill_rate": 1.0,
+    "breaker_halts": 0
+  },
+  "holdout_brief": {
+    "trades": 43,
+    "win_rate": 0.13953488372093023,
+    "win_rate_ci_low": 0.06555634267713947,
+    "win_rate_ci_high": 0.27263876594425684,
+    "avg_win": 177.76000000000045,
+    "avg_loss": -100.44969178378355,
+    "payoff_ratio": 1.7696420650311817,
+    "profit_factor": 0.28696898351857003,
+    "expectancy": -61.629734790697405,
+    "expectancy_bps": -25.65739342323418,
+    "expectancy_r": -0.6350814259207563,
+    "t_stat": -3.5617843553738835,
+    "net_pnl": -2650.0785959999885,
+    "total_return": -0.026500785959999884,
+    "fees": 0.0,
+    "worst_trade": -241.72645499999913,
+    "worst_trade_r": -1.1975459459458737,
+    "best_trade": 244.41999999999874,
+    "largest_loss_vs_avg_win": 1.3598472941044022,
+    "longest_losing_streak": 11,
+    "avg_bars_held": 2.7906976744186047,
+    "long_share": 0.5348837209302325,
+    "exits": {
+      "stop": {
+        "trades": 37,
+        "win_rate": 0.0,
+        "pnl": -3716.638595999991
+      },
+      "target": {
+        "trades": 6,
+        "win_rate": 1.0,
+        "pnl": 1066.5600000000027
+      }
+    },
+    "max_drawdown": 0.027576286587034482,
+    "days": 60,
+    "trades_per_day": 0.7166666666666667,
+    "sharpe": -7.062581944254808,
+    "worst_day": -0.00411185710026285,
+    "profitable_days": 0.1016949152542373,
+    "orders_placed": 44,
+    "fill_rate": 0.9772727272727273,
+    "breaker_halts": 0
+  },
+  "holdout_brief_strict": {
+    "trades": 7,
+    "win_rate": 0.14285714285714285,
+    "win_rate_ci_low": 0.02567895594897479,
+    "win_rate_ci_high": 0.51313450331903,
+    "avg_win": 75.72000000000287,
+    "avg_loss": -116.38263350000028,
+    "payoff_ratio": 0.650612533183507,
+    "profit_factor": 0.10843542219725118,
+    "expectancy": -88.93940014285697,
+    "expectancy_bps": -35.724135329702406,
+    "expectancy_r": -0.8785919065836882,
+    "t_stat": -4.269361207124538,
+    "net_pnl": -622.5758009999988,
+    "total_return": -0.006225758009999988,
+    "fees": 0.0,
+    "worst_trade": -172.4701000000019,
+    "worst_trade_r": -1.1633125000000157,
+    "best_trade": 75.72000000000287,
+    "largest_loss_vs_avg_win": 2.2777350765979314,
+    "longest_losing_streak": 4,
+    "avg_bars_held": 3.5714285714285716,
+    "long_share": 0.5714285714285714,
+    "exits": {
+      "stop": {
+        "trades": 6,
+        "win_rate": 0.0,
+        "pnl": -698.2958010000017
+      },
+      "target": {
+        "trades": 1,
+        "win_rate": 1.0,
+        "pnl": 75.72000000000287
+      }
+    },
+    "max_drawdown": 0.0062257580100000265,
+    "days": 60,
+    "trades_per_day": 0.11666666666666667,
+    "sharpe": -3.6249918230622367,
+    "worst_day": -0.0036817657254308855,
+    "profitable_days": 0.01694915254237288,
+    "orders_placed": 7,
+    "fill_rate": 1.0,
+    "breaker_halts": 0
+  },
+  "holdout_previous": {
+    "trades": 16656,
+    "win_rate": 0.8589697406340058,
+    "win_rate_ci_low": 0.8536010652176339,
+    "win_rate_ci_high": 0.8641728660783276,
+    "avg_win": 57.36745089816231,
+    "avg_loss": -121.80601667347754,
+    "payoff_ratio": 0.4709738686549931,
+    "profit_factor": 2.8685496546815608,
+    "expectancy": 32.09857029502938,
+    "expectancy_bps": 12.923418812574626,
+    "expectancy_r": 0.29890758048183513,
+    "t_stat": 73.99924897510917,
+    "net_pnl": 534633.7868340095,
+    "total_return": 5.346337868340094,
+    "fees": 0.0,
+    "worst_trade": -479.9475800000013,
+    "worst_trade_r": -1.112064615384676,
+    "best_trade": 256.19999999999754,
+    "largest_loss_vs_avg_win": 8.36620021433401,
+    "longest_losing_streak": 7,
+    "avg_bars_held": 1.545989433237272,
+    "long_share": 0.5356628242074928,
+    "exits": {
+      "session_end": {
+        "trades": 72,
+        "win_rate": 0.3472222222222222,
+        "pnl": -1500.669999999925
+      },
+      "stop": {
+        "trades": 2088,
+        "win_rate": 0.0,
+        "pnl": -271093.043165999
+      },
+      "target": {
+        "trades": 14185,
+        "win_rate": 1.0,
+        "pnl": 817783.400000008
+      },
+      "time": {
+        "trades": 296,
+        "win_rate": 0.3277027027027027,
+        "pnl": -9021.769999999704
+      },
+      "trend_over": {
+        "trades": 15,
+        "win_rate": 0.0,
+        "pnl": -1534.1299999999796
+      }
+    },
+    "max_drawdown": 0.007451641650109697,
+    "days": 60,
+    "trades_per_day": 277.6,
+    "sharpe": 24.72352241528008,
+    "worst_day": 0.005991426562750757,
+    "profitable_days": 1.0,
+    "orders_placed": 16656,
+    "fill_rate": 1.0,
+    "breaker_halts": 0
+  },
+  "steadiness": {
+    "overall": 0.9144106272069952,
+    "half_hours": 293,
+    "half_hour_p5": 0.7615384615384616,
+    "half_hour_p25": 0.875,
+    "half_hour_median": 0.9411764705882353,
+    "half_hours_below_70": 0.010238907849829351,
+    "half_hours_losing": 0.010238907849829351,
+    "sessions": 60,
+    "session_min": 0.76,
+    "session_median": 0.9110671936758893,
+    "session_max": 0.972972972972973,
+    "sessions_below_80": 2,
+    "sessions_losing": 0,
+    "trades_per_session": 94.0
+  },
+  "steadiness_previous": {
+    "overall": 0.8589697406340058,
+    "half_hours": 729,
+    "half_hour_p5": 0.625,
+    "half_hour_p25": 0.7777777777777778,
+    "half_hour_median": 0.8666666666666667,
+    "half_hours_below_70": 0.12071330589849108,
+    "half_hours_losing": 0.10425240054869685,
+    "sessions": 60,
+    "session_min": 0.7669172932330827,
+    "session_median": 0.8531359265734266,
+    "session_max": 0.9210526315789473,
+    "sessions_below_80": 4,
+    "sessions_losing": 0,
+    "trades_per_session": 277.5
+  },
+  "random_entry": {
+    "win_rate": 0.6051236324212679,
+    "expectancy_bps": -12.581185856472045
+  },
+  "ablation": {
+    "all filters (as chosen)": {
+      "trades": 5947,
+      "win_rate": 0.9144106272069952,
+      "win_rate_ci_low": 0.9070300691925776,
+      "win_rate_ci_high": 0.9212561348966056,
+      "avg_win": 52.19396653181375,
+      "avg_loss": -84.52075171119746,
+      "payoff_ratio": 0.617528423199045,
+      "profit_factor": 6.597484411309247,
+      "expectancy": 40.49263954582204,
+      "expectancy_bps": 16.296646911199915,
+      "expectancy_r": 0.23480539421134206,
+      "t_stat": 76.78117885503683,
+      "net_pnl": 240809.72737900366,
+      "total_return": 2.4080972737900366,
+      "fees": 0.0,
+      "worst_trade": -402.53812499999594,
+      "worst_trade_r": -1.0558960264900348,
+      "best_trade": 161.47000000000168,
+      "largest_loss_vs_avg_win": 7.712349755112733,
+      "longest_losing_streak": 6,
+      "avg_bars_held": 1.274592231377165,
+      "long_share": 0.583319320665882,
+      "exits": {
+        "session_end": {
+          "trades": 17,
+          "win_rate": 0.4117647058823529,
+          "pnl": -87.85999999998309
+        },
+        "stop": {
+          "trades": 94,
+          "win_rate": 0.0,
+          "pnl": -18038.09262099994
+        },
+        "target": {
+          "trades": 5276,
+          "win_rate": 1.0,
+          "pnl": 280102.600000003
+        },
+        "time": {
+          "trades": 560,
+          "win_rate": 0.2767857142857143,
+          "pnl": -21166.919999999445
+        }
+      },
+      "max_drawdown": 0.004589967692947283,
+      "days": 60,
+      "trades_per_day": 99.11666666666666,
+      "sharpe": 27.444165960827302,
+      "worst_day": 0.00218808705454121,
+      "profitable_days": 1.0,
+      "orders_placed": 5947,
+      "fill_rate": 1.0,
+      "breaker_halts": 0
+    },
+    "without the regime gate": {
+      "trades": 6514,
+      "win_rate": 0.9111145225667793,
+      "win_rate_ci_low": 0.9039591100715857,
+      "win_rate_ci_high": 0.917785315260874,
+      "avg_win": 53.200530749789976,
+      "avg_loss": -87.0124855388591,
+      "payoff_ratio": 0.6114126084357289,
+      "profit_factor": 6.2672432315475834,
+      "expectancy": 40.73762985462145,
+      "expectancy_bps": 16.394074621794083,
+      "expectancy_r": 0.23232998720341708,
+      "t_stat": 78.37699338441338,
+      "net_pnl": 265364.9208730041,
+      "total_return": 2.6536492087300414,
+      "fees": 0.0,
+      "worst_trade": -459.98429100000175,
+      "worst_trade_r": -1.0558960264900348,
+      "best_trade": 165.0,
+      "largest_loss_vs_avg_win": 8.646235000236679,
+      "longest_losing_streak": 6,
+      "avg_bars_held": 1.3045747620509671,
+      "long_share": 0.5801350936444581,
+      "exits": {
+        "session_end": {
+          "trades": 18,
+          "win_rate": 0.4444444444444444,
+          "pnl": -81.8599999999857
+        },
+        "stop": {
+          "trades": 103,
+          "win_rate": 0.0,
+          "pnl": -20314.28912699994
+        },
+        "target": {
+          "trades": 5750,
+          "win_rate": 1.0,
+          "pnl": 311277.1600000034
+        },
+        "time": {
+          "trades": 643,
+          "win_rate": 0.27527216174183516,
+          "pnl": -25516.08999999932
+        }
+      },
+      "max_drawdown": 0.004473462534486217,
+      "days": 60,
+      "trades_per_day": 108.56666666666666,
+      "sharpe": 27.807797440961256,
+      "worst_day": 0.0023054501189916365,
+      "profitable_days": 1.0,
+      "orders_placed": 6514,
+      "fill_rate": 1.0,
+      "breaker_halts": 0
+    },
+    "without RSI(2)": {
+      "trades": 6321,
+      "win_rate": 0.907609555450087,
+      "win_rate_ci_low": 0.9002210390078924,
+      "win_rate_ci_high": 0.9145029218261622,
+      "avg_win": 52.41489803033003,
+      "avg_loss": -83.82984778938263,
+      "payoff_ratio": 0.625253408094206,
+      "profit_factor": 6.142258223007637,
+      "expectancy": 39.827185396456876,
+      "expectancy_bps": 16.028396119963947,
+      "expectancy_r": 0.22936287088111454,
+      "t_stat": 74.60918712867188,
+      "net_pnl": 251747.6388910039,
+      "total_return": 2.517476388910039,
+      "fees": 0.0,
+      "worst_trade": -402.53812499999594,
+      "worst_trade_r": -1.0558960264900348,
+      "best_trade": 161.47000000000168,
+      "largest_loss_vs_avg_win": 7.67984180312754,
+      "longest_losing_streak": 6,
+      "avg_bars_held": 1.3137161841480778,
+      "long_share": 0.5845594051574118,
+      "exits": {
+        "session_end": {
+          "trades": 20,
+          "win_rate": 0.45,
+          "pnl": -64.39999999998456
+        },
+        "stop": {
+          "trades": 108,
+          "win_rate": 0.0,
+          "pnl": -20364.891108999946
+        },
+        "target": {
+          "trades": 5556,
+          "win_rate": 1.0,
+          "pnl": 296492.9500000033
+        },
+        "time": {
+          "trades": 637,
+          "win_rate": 0.27001569858712715,
+          "pnl": -24316.01999999937
+        }
+      },
+      "max_drawdown": 0.0041280936398390145,
+      "days": 60,
+      "trades_per_day": 105.35,
+      "sharpe": 26.63216148558198,
+      "worst_day": 0.0023324238076183335,
+      "profitable_days": 1.0,
+      "orders_placed": 6321,
+      "fill_rate": 1.0,
+      "breaker_halts": 0
+    },
+    "without the VWAP band": {
+      "trades": 9367,
+      "win_rate": 0.8970855129710686,
+      "win_rate_ci_low": 0.8907684937801861,
+      "win_rate_ci_high": 0.9030769597594406,
+      "avg_win": 52.62290372486078,
+      "avg_loss": -87.63917573443898,
+      "payoff_ratio": 0.6004495510582707,
+      "profit_factor": 5.23400163645503,
+      "expectancy": 38.187903767695744,
+      "expectancy_bps": 15.371931176164447,
+      "expectancy_r": 0.2191737683304125,
+      "t_stat": 80.91858329549108,
+      "net_pnl": 357706.094592006,
+      "total_return": 3.57706094592006,
+      "fees": 0.0,
+      "worst_trade": -423.7401600000027,
+      "worst_trade_r": -1.0558960264900348,
+      "best_trade": 161.47000000000168,
+      "largest_loss_vs_avg_win": 8.052390309275427,
+      "longest_losing_streak": 5,
+      "avg_bars_held": 1.3797373758940963,
+      "long_share": 0.568164833991673,
+      "exits": {
+        "session_end": {
+          "trades": 29,
+          "win_rate": 0.3793103448275862,
+          "pnl": -368.1199999999724
+        },
+        "stop": {
+          "trades": 192,
+          "win_rate": 0.0,
+          "pnl": -35910.08540799987
+        },
+        "target": {
+          "trades": 8121,
+          "win_rate": 1.0,
+          "pnl": 435514.1100000049
+        },
+        "time": {
+          "trades": 1025,
+          "win_rate": 0.26439024390243904,
+          "pnl": -41529.80999999907
+        }
+      },
+      "max_drawdown": 0.00787909590789837,
+      "days": 60,
+      "trades_per_day": 156.11666666666667,
+      "sharpe": 26.210902747322326,
+      "worst_day": 0.002422312268599569,
+      "profitable_days": 1.0,
+      "orders_placed": 9367,
+      "fill_rate": 1.0,
+      "breaker_halts": 0
+    },
+    "with the order-flow filter": {
+      "trades": 1238,
+      "win_rate": 0.9176090468497576,
+      "win_rate_ci_low": 0.9009697573757652,
+      "win_rate_ci_high": 0.931664614028768,
+      "avg_win": 50.50603873239494,
+      "avg_loss": -91.69554028431263,
+      "payoff_ratio": 0.5508014738317166,
+      "profit_factor": 6.134416414439512,
+      "expectancy": 38.78991509773892,
+      "expectancy_bps": 15.612671603851032,
+      "expectancy_r": 0.23293792687694373,
+      "t_stat": 33.72170232782201,
+      "net_pnl": 48021.91489100078,
+      "total_return": 0.4802191489100078,
+      "fees": 0.0,
+      "worst_trade": -367.45193100000085,
+      "worst_trade_r": -1.0558682119204934,
+      "best_trade": 158.40000000000225,
+      "largest_loss_vs_avg_win": 7.2754058766504395,
+      "longest_losing_streak": 3,
+      "avg_bars_held": 1.2092084006462036,
+      "long_share": 0.5807754442649434,
+      "exits": {
+        "session_end": {
+          "trades": 3,
+          "win_rate": 0.6666666666666666,
+          "pnl": 62.89000000000962
+        },
+        "stop": {
+          "trades": 21,
+          "win_rate": 0.0,
+          "pnl": -3953.4351090000027
+        },
+        "target": {
+          "trades": 1098,
+          "win_rate": 1.0,
+          "pnl": 56526.76000000062
+        },
+        "time": {
+          "trades": 116,
+          "win_rate": 0.3103448275862069,
+          "pnl": -4614.2999999998565
+        }
+      },
+      "max_drawdown": 0.004328095316357583,
+      "days": 60,
+      "trades_per_day": 20.633333333333333,
+      "sharpe": 35.29324024122583,
+      "worst_day": -0.0009392435582972203,
+      "profitable_days": 0.9661016949152542,
+      "orders_placed": 1238,
+      "fill_rate": 1.0,
+      "breaker_halts": 0
+    },
+    "without the loss-review filters": {
+      "trades": 15063,
+      "win_rate": 0.8618469096461528,
+      "win_rate_ci_low": 0.856244019998826,
+      "win_rate_ci_high": 0.8672652787250684,
+      "avg_win": 55.51608149745859,
+      "avg_loss": -104.49593630898516,
+      "payoff_ratio": 0.5312750280862836,
+      "profit_factor": 3.3142779503201028,
+      "expectancy": 33.40992674374357,
+      "expectancy_bps": 13.450011670854703,
+      "expectancy_r": 0.18701236773341745,
+      "t_stat": 74.1220418127253,
+      "net_pnl": 503253.7265410094,
+      "total_return": 5.0325372654100935,
+      "fees": 0.0,
+      "worst_trade": -641.6000000000006,
+      "worst_trade_r": -1.0668678899082913,
+      "best_trade": 256.19999999999754,
+      "largest_loss_vs_avg_win": 11.557011638679356,
+      "longest_losing_streak": 8,
+      "avg_bars_held": 1.53521874792538,
+      "long_share": 0.537874261435305,
+      "exits": {
+        "session_end": {
+          "trades": 60,
+          "win_rate": 0.31666666666666665,
+          "pnl": -1626.4999999999347
+        },
+        "stop": {
+          "trades": 466,
+          "win_rate": 0.0,
+          "pnl": -96452.72345899977
+        },
+        "target": {
+          "trades": 12519,
+          "win_rate": 1.0,
+          "pnl": 709439.910000007
+        },
+        "time": {
+          "trades": 1985,
+          "win_rate": 0.22367758186397985,
+          "pnl": -103185.52999999799
+        },
+        "trend_over": {
+          "trades": 33,
+          "win_rate": 0.0,
+          "pnl": -4921.429999999954
+        }
+      },
+      "max_drawdown": 0.006949410103248899,
+      "days": 60,
+      "trades_per_day": 251.05,
+      "sharpe": 25.60618444003696,
+      "worst_day": 0.0026242407256529265,
+      "profitable_days": 1.0,
+      "orders_placed": 15063,
+      "fill_rate": 1.0,
+      "breaker_halts": 0
+    }
+  },
+  "null_market": {
+    "trades": 142,
+    "win_rate": 0.6549295774647887,
+    "win_rate_ci_low": 0.573585303167698,
+    "win_rate_ci_high": 0.7281118806262264,
+    "avg_win": 57.86430107526914,
+    "avg_loss": -120.07063669387682,
+    "payoff_ratio": 0.48191883268509406,
+    "profit_factor": 0.9146622742798723,
+    "expectancy": -3.5357830845065754,
+    "expectancy_bps": -0.5631052626210846,
+    "expectancy_r": 0.010332173986237743,
+    "t_stat": 0.2887233044101657,
+    "net_pnl": -502.0811979999337,
+    "total_return": -0.005020811979999337,
+    "fees": 0.0,
+    "worst_trade": -388.36127999999553,
+    "worst_trade_r": -1.0276454545454574,
+    "best_trade": 123.1199999999998,
+    "largest_loss_vs_avg_win": 6.711586812304536,
+    "longest_losing_streak": 5,
+    "avg_bars_held": 2.5985915492957745,
+    "long_share": 0.44366197183098594,
+    "exits": {
+      "stop": {
+        "trades": 9,
+        "win_rate": 0.0,
+        "pnl": -2202.5911979999964
+      },
+      "target": {
+        "trades": 85,
+        "win_rate": 1.0,
+        "pnl": 5235.0000000000255
+      },
+      "time": {
+        "trades": 48,
+        "win_rate": 0.16666666666666666,
+        "pnl": -3534.4899999999625
+      }
+    },
+    "max_drawdown": 0.01598613822658901,
+    "days": 21,
+    "trades_per_day": 6.761904761904762,
+    "sharpe": -2.7051205629765143,
+    "worst_day": -0.00461690066211895,
+    "profitable_days": 0.35,
+    "orders_placed": 142,
+    "fill_rate": 1.0,
+    "breaker_halts": 0
+  },
+  "by_playbook": {
+    "continuation": {
+      "candidates": 300,
+      "profitable": 300,
+      "median_win_rate": 0.8932657657721309,
+      "median_bps": 13.61842653964442,
+      "best_t": 117.7166849656591
+    }
+  },
+  "by_mood": {
+    "CALM": {
+      "trades": 2161,
+      "win_rate": 0.923646459972235,
+      "win_rate_ci_low": 0.9116825314172156,
+      "win_rate_ci_high": 0.9341068325713552,
+      "avg_win": 46.12315130260582,
+      "avg_loss": -63.939880684847374,
+      "payoff_ratio": 0.7213518512795128,
+      "profit_factor": 8.72617148578126,
+      "expectancy": 37.71944918417465,
+      "expectancy_bps": 15.177967550417534,
+      "expectancy_r": 0.24535643420383227,
+      "t_stat": 53.076867001461,
+      "net_pnl": 81511.72968700141,
+      "total_return": 0.8151172968700141,
+      "fees": 0.0,
+      "worst_trade": -302.68612999999743,
+      "worst_trade_r": -1.0558960264900348,
+      "best_trade": 109.43999999999983,
+      "largest_loss_vs_avg_win": 6.562563950024304,
+      "longest_losing_streak": 5,
+      "avg_bars_held": 1.2457195742711709,
+      "long_share": 0.5201295696436835,
+      "exits": {
+        "session_end": {
+          "trades": 5,
+          "win_rate": 0.4,
+          "pnl": 49.46999999999791
+        },
+        "stop": {
+          "trades": 25,
+          "win_rate": 0.0,
+          "pnl": -3815.100312999987
+        },
+        "target": {
+          "trades": 1939,
+          "win_rate": 1.0,
+          "pnl": 90747.5200000012
+        },
+        "time": {
+          "trades": 192,
+          "win_rate": 0.2864583333333333,
+          "pnl": -5470.159999999795
+        }
+      }
+    },
+    "RALLY": {
+      "trades": 1475,
+      "win_rate": 0.9227118644067797,
+      "win_rate_ci_low": 0.9079587256882089,
+      "win_rate_ci_high": 0.9352688383727426,
+      "avg_win": 53.169507714916,
+      "avg_loss": -93.30549392105176,
+      "payoff_ratio": 0.5698432694638981,
+      "profit_factor": 6.803128857371625,
+      "expectancy": 41.848727927458164,
+      "expectancy_bps": 16.838138235425415,
+      "expectancy_r": 0.23953049558422654,
+      "t_stat": 39.63854707658707,
+      "net_pnl": 61726.87369300079,
+      "total_return": 0.6172687369300078,
+      "fees": 0.0,
+      "worst_trade": -317.87387099999717,
+      "worst_trade_r": -1.0439031446540692,
+      "best_trade": 123.3600000000024,
+      "largest_loss_vs_avg_win": 5.9784994193358285,
+      "longest_losing_streak": 3,
+      "avg_bars_held": 1.1911864406779662,
+      "long_share": 0.8535593220338983,
+      "exits": {
+        "session_end": {
+          "trades": 3,
+          "win_rate": 0.3333333333333333,
+          "pnl": -227.12999999999246
+        },
+        "stop": {
+          "trades": 26,
+          "win_rate": 0.0,
+          "pnl": -4828.906306999981
+        },
+        "target": {
+          "trades": 1324,
+          "win_rate": 1.0,
+          "pnl": 71561.04000000065
+        },
+        "time": {
+          "trades": 122,
+          "win_rate": 0.29508196721311475,
+          "pnl": -4778.129999999887
+        }
+      }
+    },
+    "SELLOFF": {
+      "trades": 150,
+      "win_rate": 0.8733333333333333,
+      "win_rate_ci_low": 0.8106321928453123,
+      "win_rate_ci_high": 0.9173893565925509,
+      "avg_win": 77.17694656488594,
+      "avg_loss": -150.25194442105226,
+      "payoff_ratio": 0.5136502350253275,
+      "profit_factor": 3.5414831993851528,
+      "expectancy": 48.36928704000043,
+      "expectancy_bps": 19.465551690215516,
+      "expectancy_r": 0.19476380567937887,
+      "t_stat": 7.88806375865344,
+      "net_pnl": 7255.3930560000645,
+      "total_return": 0.07255393056000065,
+      "fees": 0.0,
+      "worst_trade": -402.53812499999594,
+      "worst_trade_r": -1.0223190476190447,
+      "best_trade": 153.1799999999979,
+      "largest_loss_vs_avg_win": 5.2157819519532955,
+      "longest_losing_streak": 3,
+      "avg_bars_held": 1.34,
+      "long_share": 0.10666666666666667,
+      "exits": {
+        "session_end": {
+          "trades": 1,
+          "win_rate": 1.0,
+          "pnl": 43.34999999999923
+        },
+        "stop": {
+          "trades": 6,
+          "win_rate": 0.0,
+          "pnl": -1962.8369439999942
+        },
+        "target": {
+          "trades": 126,
+          "win_rate": 1.0,
+          "pnl": 9980.860000000052
+        },
+        "time": {
+          "trades": 17,
+          "win_rate": 0.23529411764705882,
+          "pnl": -805.9799999999935
+        }
+      }
+    },
+    "STEADY": {
+      "trades": 2115,
+      "win_rate": 0.9040189125295508,
+      "win_rate_ci_low": 0.8907224032482275,
+      "win_rate_ci_high": 0.9158503957755408,
+      "avg_win": 55.65271966527258,
+      "avg_loss": -89.02750288177242,
+      "payoff_ratio": 0.6251182821467968,
+      "profit_factor": 5.8878135737176125,
+      "expectancy": 41.76615456974061,
+      "expectancy_bps": 16.815447041725026,
+      "expectancy_r": 0.22495037472226787,
+      "t_stat": 41.365597530963505,
+      "net_pnl": 88335.41691500138,
+      "total_return": 0.8833541691500137,
+      "fees": 0.0,
+      "worst_trade": -397.65855999999826,
+      "worst_trade_r": -1.0536958333333295,
+      "best_trade": 136.9799999999998,
+      "largest_loss_vs_avg_win": 7.145357179159352,
+      "longest_losing_streak": 4,
+      "avg_bars_held": 1.3527186761229315,
+      "long_share": 0.502127659574468,
+      "exits": {
+        "session_end": {
+          "trades": 8,
+          "win_rate": 0.375,
+          "pnl": 46.45000000001224
+        },
+        "stop": {
+          "trades": 35,
+          "win_rate": 0.0,
+          "pnl": -7030.133084999978
+        },
+        "target": {
+          "trades": 1850,
+          "win_rate": 1.0,
+          "pnl": 104983.02000000112
+        },
+        "time": {
+          "trades": 222,
+          "win_rate": 0.26576576576576577,
+          "pnl": -9663.919999999773
+        }
+      }
+    },
+    "TURBULENT": {
+      "trades": 46,
+      "win_rate": 0.8260869565217391,
+      "win_rate_ci_low": 0.6927636765607748,
+      "win_rate_ci_high": 0.9091431643111074,
+      "avg_win": 75.97631578947376,
+      "avg_loss": -113.34824650000002,
+      "payoff_ratio": 0.6702910555345357,
+      "profit_factor": 3.183882513789045,
+      "expectancy": 43.05030495652181,
+      "expectancy_bps": 17.300307835225173,
+      "expectancy_r": 0.17131153661156856,
+      "t_stat": 3.5557682328711304,
+      "net_pnl": 1980.3140280000034,
+      "total_return": 0.019803140280000034,
+      "fees": 0.0,
+      "worst_trade": -238.76160000000084,
+      "worst_trade_r": -1.0228335664335755,
+      "best_trade": 161.47000000000168,
+      "largest_loss_vs_avg_win": 3.142579335665555,
+      "longest_losing_streak": 3,
+      "avg_bars_held": 1.5,
+      "long_share": 0.17391304347826086,
+      "exits": {
+        "stop": {
+          "trades": 2,
+          "win_rate": 0.0,
+          "pnl": -401.115972000003
+        },
+        "target": {
+          "trades": 37,
+          "win_rate": 1.0,
+          "pnl": 2830.1600000000008
+        },
+        "time": {
+          "trades": 7,
+          "win_rate": 0.14285714285714285,
+          "pnl": -448.72999999999496
+        }
+      }
+    }
+  }
+}

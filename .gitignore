@@ -1,0 +1,14 @@
+# Secrets: the trading program's API keys live here, never in the repository
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated price history (rebuilt by scripts/generate_history.ts) and live session output
+data/
+runs/
+
+.DS_Store

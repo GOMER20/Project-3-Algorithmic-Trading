@@ -1,0 +1,8 @@
+pandas>=3.0
+numpy>=2.5
+httpx>=0.28
+websockets>=17.2
+fastapi>=0.143
+uvicorn>=0.54
+matplotlib>=3.11
+pytest>=9.1

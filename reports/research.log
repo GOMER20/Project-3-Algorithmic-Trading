@@ -1,0 +1,18 @@
+Running 240 candidates over the main history ...
+Walk-forward done in 263s. Final candidate #70: playbook=continuation
+
+Done in 311s. Report: reports/backtest_report.md
+
+HOLDOUT, frozen parameters
+  trades               30947  (998.3 per day over 31 days)
+  win rate             85.6%   (95% interval 85.3% to 86.0%)
+  average win / loss   $58.28 / $-124.08   (payoff ratio 0.47)
+  profit factor        2.80
+  expectancy           $32.10 per trade   (12.92 bps, 0.294 R, t = 98.04)
+  net profit           $993,492.07   (993.5% of starting equity)
+  worst trade          $-416.70   (-1.13 R, 7.2x the average win)
+  longest losing run   7 trades
+  average hold         1.6 bars
+  max drawdown         1.5%
+  daily Sharpe (ann.)  24.99   worst day 2.0%, profitable days 100.0%
+  exits                end 3 (33.3% won), stop 3999 (0.0% won), target 26325 (100.0% won), time 591 (30.3% won), trend_over 29 (0.0% won)
